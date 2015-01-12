@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import CoreBluetooth
+
 
 class ViewController: UIViewController {
+    let transferServiceUUID = "926C303E-2624-4222-BEB9-73A148BA7CA0"
+    let transferCharactersiticsUUID = "D74ED0AF-B042-46CB-B456-AF98F16ECFDA"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {

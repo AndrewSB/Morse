@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F7894B23-9A77-44D5-A236-C90752CB6F60</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Morse</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D15875B6E679B38C05AA2A74593CEA535A2E921F</key>
+		<string>https://github.com/AndrewSB/Morse.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Morse.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D15875B6E679B38C05AA2A74593CEA535A2E921F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/AndrewSB/Morse.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D15875B6E679B38C05AA2A74593CEA535A2E921F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D15875B6E679B38C05AA2A74593CEA535A2E921F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Morse</string>
+		</dict>
+	</array>
+</dict>
+</plist>
