@@ -12,6 +12,7 @@ import AudioToolbox
 
 
 class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate {
+    @IBOutlet weak var outputLabel: UILabel!
     let transferServiceUUID = "926C303E-2624-4222-BEB9-73A148BA7CA0"
     let transferCharactersiticsUUID = "D74ED0AF-B042-46CB-B456-AF98F16ECFDA"
     
@@ -34,14 +35,18 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         println("began")
         began = NSDate(timeIntervalSinceNow: 0)
+        vibrate()
     }
     
     override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
         println("held for \(began.timeIntervalSinceNow)")
+        
+        if (began.timeIntervalSinceNow < -0.15) {
+            outputLabel.text = "\(outputLabel!.text!)-"
+        } else {
+            outputLabel.text = "\(outputLabel!.text!)."
+        }
     }
-    
-    //Vibration Handler
-    
     
     //CBCentralManagerDelegate
     func centralManager(central: CBCentralManager!, didConnectPeripheral peripheral: CBPeripheral!) {
