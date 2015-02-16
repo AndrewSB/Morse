@@ -18,16 +18,25 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     
     var began: NSDate
 
-//    var centralManager: CBCentralManager
-//    var peripheral: CBPeripheral
+    var centralManager: CBCentralManager
+    var peripheral: CBPeripheral
     
+    var dataToSend: NSData
+
     override func viewDidLoad() {
+        
         super.viewDidLoad()
     }
     
     required init(coder aDecoder: NSCoder) {
         began = NSDate()
+        centralManager = CBCentralManager()
+        peripheral = CBPeripheral()
+        dataToSend = NSData()
+        
         super.init(coder: aDecoder)
+        
+        centralManager.delegate = self
     }
 
     
@@ -35,7 +44,6 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         println("began")
         began = NSDate(timeIntervalSinceNow: 0)
-        vibrate()
     }
     
     override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
@@ -58,7 +66,11 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     }
     
     func centralManagerDidUpdateState(central: CBCentralManager!) {
-        
+        if central.state != .PoweredOn {
+            println("bluetooth not on")
+        } else {
+            self.centralManager.scanForPeripheralsWithServices([CBUUID(string: transferServiceUUID)], options: nil)
+        }
     }
     
     
